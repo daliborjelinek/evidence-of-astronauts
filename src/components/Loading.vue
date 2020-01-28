@@ -1,0 +1,70 @@
+<template>
+  <div class="loading-wrapper">
+    <div class="square-spinner"></div>
+  </div>
+</template>
+
+<style scoped>
+.loading-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+}
+.square-spinner {
+  width: 55px;
+  display: block;
+  background-color: #03a9f4;
+  height: 55px;
+  -webkit-animation: 3s rotate2 ease-in-out infinite;
+  animation: 3s flip ease-in-out infinite;
+}
+
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
+  75% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(-180deg);
+    transform: perspective(120px) rotateX(0deg) rotateY(-180deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(-360deg);
+    transform: perspective(120px) rotateX(0deg) rotateY(-360deg);
+  }
+}
+
+@keyframes flip {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
+  75% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(-180deg);
+    transform: perspective(120px) rotateX(0deg) rotateY(-180deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(-360deg);
+    transform: perspective(120px) rotateX(0deg) rotateY(-360deg);
+  }
+}
+</style>
